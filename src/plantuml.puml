@@ -1,6 +1,22 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 ToDoList o-- Task
+Controller o-- Launcher
+
+Controller : add_pressed()
+Controller : remove_pressed()
+Controller : apply_pressed()
+Controller : show_pressed()
+Controller : imp_pressed()
+Controller : exp_pressed()
+Controller : isdatevalid()
+Controller : initialize()
+Controller : refresh()
+Controller : readfile()
+
+Launcher : start()
+Launcher : main()
+
 
 ToDoList : -title : String
 
