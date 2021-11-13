@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.londono_app_part2_final.HelloController">
+    <children>
+        <HBox layoutX="3.0" prefHeight="213.0" prefWidth="592.0">
+            <children>
+                <VBox prefHeight="216.0" prefWidth="111.0">
+                    <children>
+                        <Label text="Add Item">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                  <TextField fx:id="name" promptText="Name">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                        <TextField fx:id="des" promptText="Description">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </TextField>
+                  <TextField fx:id="date" promptText="Due Date">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                        <Button fx:id="Add_Item" mnemonicParsing="false" onAction="#add_pressed" text="Add">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                  <Label text="Select Item to Remove">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="remove_sel" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Button fx:id="remove" mnemonicParsing="false" onAction="#remove_pressed" text="Remove">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="208.0" prefWidth="138.0">
+                    <children>
+                        <Label text="Edit Item">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <Label maxHeight="30.0" prefHeight="30.0" text="Select Item">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="edit_sel" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label text="New Completion Status">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="status" minHeight="30.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="new_des" promptText="New Description">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </TextField>
+                  <TextField fx:id="new_date" promptText="New Due Date">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                        <Button fx:id="apply" mnemonicParsing="false" onAction="#apply_pressed" text="Apply Changes">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="202.0" prefWidth="102.0">
+                    <children>
+                        <Label text="Show List">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <Label text="Filters">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="filters" minHeight="30.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Button fx:id="show" mnemonicParsing="false" onAction="#show_pressed" text="Show Items">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label text="Import/Export">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="export" mnemonicParsing="false" onAction="#export_pressed" text="Export">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="imp" mnemonicParsing="false" onAction="#imp_pressed" text="Import">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+      <TextArea fx:id="output" layoutX="327.0" layoutY="252.0" prefHeight="28.0" prefWidth="265.0" />
+      <ListView fx:id="table" layoutX="2.0" layoutY="247.0" prefHeight="148.0" prefWidth="330.0" />
+      <Label layoutX="33.0" layoutY="204.0" prefHeight="35.0" prefWidth="144.0" text="To Do List" />
+      <Label layoutX="414.0" layoutY="211.0" text="Output" />
+    </children>
+</AnchorPane>

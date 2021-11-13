@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+ToDoList o-- Task
+
+ToDoList : -title : String
+
+ToDoList : createList()
+ToDoList : setTitle()
+ToDoList : getTitle()
+ToDoList : get_names()
+ToDoList : as_text()
+ToDoList : remove_item()
+ToDoList : get_tasks()
+ToDoList : set_tasks()
+
+Task : -date : Integer
+Task : -description : String
+Task : -title : String
+Task : -completed : String
+Task : createTask()
+Task : setTitle()
+Task : setDescription()
+Task : setCompletion()
+Task : setDate()
+Task : getTitle()
+Task : getDescription()
+Task : getCompletion()
+Task : getDate()
+
+
+@enduml
